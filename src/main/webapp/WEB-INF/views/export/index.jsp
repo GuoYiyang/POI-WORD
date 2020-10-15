@@ -11,33 +11,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>POI-WORK</title>
+    <title>煤矿作业规程智能化管理信息系统</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<h1 align="center">POI-WORK</h1>
-<form class="form-horizontal" action="<%=basePath%>/auth/exportWord/exportUserWord" method="post" enctype="multipart/form-data">
+<h3 align="center">国源矿业开发有限责任公司龙王沟煤矿</h3>
+<h1 align="center">煤矿作业规程智能化管理信息系统</h1>
+<br />
+<form class="form-horizontal col-sm-10 col-sm-offset-1" action="<%=basePath%>/auth/exportWord/exportUserWord" method="post" enctype="multipart/form-data">
     <div class="form-group">
-        <label for="inputTime" class="col-sm-5 control-label">请输入时间</label>
-        <div class="col-sm-3">
-            <input type="text" class="form-control" id="inputTime" name="inputTime">
-        </div>
-        <label for="inputAddress" class="col-sm-5 control-label">请输入地址</label>
-        <div class="col-sm-3">
-            <input type="text" class="form-control" id="inputAddress" name="inputAddress">
-        </div>
-        <label for="inputName" class="col-sm-5 control-label">请输入参会人员</label>
-        <div class="col-sm-3">
-            <input type="text" class="form-control" id="inputName" name="inputName">
-        </div>
+        <label for="inputText1" class="control-label">在模板任意位置插入文字演示</label>
+        <input type="text" class="form-control" id="inputText1" name="inputText1" placeholder="请输入要替换的文字">
     </div>
     <div class="form-group">
-        <label for="inputFile" class="col-sm-5 control-label">请选择Word文件</label>
-        <div class="col-sm-3">
-            <input type="file" id="inputFile" name="inputFile">
-        </div>
+        <label for="inputText2" class="control-label">在模板任意表格插入文字演示</label>
+        <input type="text" class="form-control" id="inputText2" name="inputText2" placeholder="请输入要替换的文字">
+    </div>
+    <div class="form-group">
+        <label for="inputImage" class="control-label">在模板任意位置插入图片演示</label>
+        <input type="file" accept="image/jpeg" id="inputImage" name="inputImage">
+    </div>
+    <div class="form-group">
+        <label for="inputFile" class="control-label">请选择Word文件</label>
+        <input type="file" id="inputFile" name="inputFile">
     </div>
     <div class="form-group">
         <div class="col-sm-offset-5 col-sm-10">
