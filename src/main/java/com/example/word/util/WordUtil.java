@@ -13,17 +13,18 @@ import java.util.Map;
 public class WordUtil {
 
     /**
-     * 根据模板填充内容生成word，并下载
-     *
-     * @param inputStream word文件流
-     * @param paramMap     替换的参数集合
+     * 替换并下载文件
+     * @param out 输出文件流
+     * @param inputStream 输入文件流
+     * @param paramMap 替换参数map集合
      */
     public static void downloadWord(OutputStream out, InputStream inputStream, Map<String, Object> paramMap) {
+        // 核心，替换操作
         // 读取模板templatePath并将paramMap的内容填充进模板，即编辑模板(compile)+渲染数据(render)
         XWPFTemplate template = XWPFTemplate.compile(inputStream).render(paramMap);
         try {
-            // 将填充之后的模板写入filePath
-            template.write(out);//将template写到OutputStream中
+            // 将填充之后的模板写入filePath，将template写到OutputStream中
+            template.write(out);
             out.flush();
             out.close();
             template.close();

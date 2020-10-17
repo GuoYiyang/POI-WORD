@@ -58,7 +58,7 @@ public class ExportWordController {
         Map<String, Object> params = new HashMap<>();
         params.put("text1", text1);
         params.put("text2", text2);
-        params.put("image", new PictureRenderData(80, 100, ".jpg", image.getInputStream()));
+        params.put("image", new PictureRenderData(100, 100, ".jpg", image.getInputStream()));
 
         WordUtil.downloadWord(response.getOutputStream(), file.getInputStream(), params);
     }
